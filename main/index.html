@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YuktaOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Syne:wght@700;800&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="boot-screen" id="bootScreen" aria-hidden="true">
+        <p class="boot-label">YuktaOS 1.0</p>
+        <h1>Booting creative desktop...</h1>
+        <div class="boot-bar">
+            <span></span>
+        </div>
+    </div>
+
+    <div class="wallpaper-glow wallpaper-glow-left"></div>
+    <div class="wallpaper-glow wallpaper-glow-right"></div>
+
+    <header class="menu-bar">
+        <div class="menu-left">
+            <span class="brand-dot"></span>
+            <span class="brand-name">YuktaOS</span>
+            <span class="menu-tag">Portfolio Desktop</span>
+        </div>
+        <div class="menu-right">
+            <span id="statusMessage">Ready to explore</span>
+            <span id="liveClock">00:00</span>
+        </div>
+    </header>
+
+    <main class="desktop">
+        <section class="desktop-icons" aria-label="Desktop apps">
+            <button class="desktop-icon" data-window="aboutWindow">
+                <span class="icon-art">01</span>
+                <span>About</span>
+            </button>
+            <button class="desktop-icon" data-window="focusWindow">
+                <span class="icon-art">02</span>
+                <span>Focus</span>
+            </button>
+            <button class="desktop-icon" data-window="skillsWindow">
+                <span class="icon-art">03</span>
+                <span>Toolkit</span>
+            </button>
+            <button class="desktop-icon" data-window="terminalWindow">
+                <span class="icon-art">&gt;_</span>
+                <span>Terminal</span>
+            </button>
+            <a class="desktop-icon desktop-link" href="https://www.linkedin.com/in/yuktachy" target="_blank" rel="noreferrer">
+                <span class="icon-art">in</span>
+                <span>LinkedIn</span>
+            </a>
+        </section>
+
+        <section class="hero-window window active" id="heroWindow">
+            <div class="window-bar">
+                <div class="window-controls" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>Desktop Overview</p>
+            </div>
+            <div class="hero-content">
+                <div class="hero-copy">
+                    <p class="eyebrow">Student Developer Workspace</p>
+                    <h1>Yukta Choudhary builds playful interfaces and grows into machine learning.</h1>
+                    <p class="hero-text">
+                        First-year B.Tech Computer Science student at SRM University, exploring intelligent systems,
+                        frontend craft, and the kinds of projects that turn curiosity into something real.
+                    </p>
+                    <div class="hero-actions">
+                        <button class="action-button primary" data-window="aboutWindow">Open About</button>
+                        <button class="action-button secondary" data-window="terminalWindow">Launch Terminal</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-frame">
+                        <img src="../images/profile.png" alt="Portrait of Yukta Choudhary">
+                    </div>
+                    <div class="quick-card">
+                        <p class="quick-label">Current mode</p>
+                        <p class="quick-value">Learning, building, iterating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="window app-window" id="aboutWindow" aria-hidden="true">
+            <div class="window-bar window-drag">
+                <div class="window-controls" aria-hidden="true">
+                    <button class="control close" data-close="aboutWindow" aria-label="Close About window"></button>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>About Yukta</p>
+            </div>
+            <div class="window-content">
+                <div class="panel-grid">
+                    <article class="panel-card">
+                        <p class="card-label">Profile</p>
+                        <h2>Computer science student with a product mindset.</h2>
+                        <p>
+                            I am a first-year B.Tech Computer Science student at SRM University with a growing passion
+                            for technology, innovation, and the intersection of design with engineering.
+                        </p>
+                    </article>
+                    <article class="panel-card">
+                        <p class="card-label">What I am exploring</p>
+                        <ul class="chip-list">
+                            <li>Machine learning fundamentals</li>
+                            <li>Frontend development</li>
+                            <li>Data-driven problem solving</li>
+                            <li>Interface design that feels alive</li>
+                        </ul>
+                    </article>
+                    <article class="panel-card wide">
+                        <p class="card-label">Approach</p>
+                        <p>
+                            Curiosity drives the work. I like learning how systems behave, breaking ideas into smaller
+                            experiments, and turning concepts into polished interfaces that are easy to use.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="window app-window" id="focusWindow" aria-hidden="true">
+            <div class="window-bar window-drag">
+                <div class="window-controls" aria-hidden="true">
+                    <button class="control close" data-close="focusWindow" aria-label="Close Focus window"></button>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>Current Focus</p>
+            </div>
+            <div class="window-content">
+                <div class="stack-list">
+                    <article class="stack-card">
+                        <p class="stack-index">01</p>
+                        <div>
+                            <h3>Machine Learning Journey</h3>
+                            <p>Building a strong foundation in intelligent systems, experimentation, and model-driven thinking.</p>
+                        </div>
+                    </article>
+                    <article class="stack-card">
+                        <p class="stack-index">02</p>
+                        <div>
+                            <h3>Frontend Experiences</h3>
+                            <p>Creating visually engaging and user-friendly interfaces that feel intentional on screen.</p>
+                        </div>
+                    </article>
+                    <article class="stack-card">
+                        <p class="stack-index">03</p>
+                        <div>
+                            <h3>Real-World Applications</h3>
+                            <p>Working toward projects that merge ML knowledge with development skills in meaningful ways.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="window app-window" id="skillsWindow" aria-hidden="true">
+            <div class="window-bar window-drag">
+                <div class="window-controls" aria-hidden="true">
+                    <button class="control close" data-close="skillsWindow" aria-label="Close Toolkit window"></button>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>Toolkit</p>
+            </div>
+            <div class="window-content">
+                <div class="toolkit-layout">
+                    <article class="toolkit-card">
+                        <p class="card-label">Strengths</p>
+                        <div class="token-wrap">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Frontend UI</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </article>
+                    <article class="toolkit-card">
+                        <p class="card-label">In Progress</p>
+                        <div class="token-wrap">
+                            <span>Machine Learning</span>
+                            <span>Data Thinking</span>
+                            <span>System Design Basics</span>
+                            <span>Project Building</span>
+                        </div>
+                    </article>
+                    <article class="toolkit-card">
+                        <p class="card-label">Quick Links</p>
+                        <div class="link-column">
+                            <a href="https://www.linkedin.com/in/yuktachy" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a href="../content/about.html">Legacy About Page</a>
+                            <a href="../explore/sub_index.html">Legacy Explore Page</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="window app-window terminal-window" id="terminalWindow" aria-hidden="true">
+            <div class="window-bar window-drag">
+                <div class="window-controls" aria-hidden="true">
+                    <button class="control close" data-close="terminalWindow" aria-label="Close Terminal window"></button>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p>YuktaOS Terminal</p>
+            </div>
+            <div class="window-content">
+                <div class="terminal-output" id="terminalOutput">
+                    <p>Welcome to YuktaOS terminal.</p>
+                    <p>Try <span class="terminal-highlight">help</span>, <span class="terminal-highlight">about</span>, <span class="terminal-highlight">skills</span>, <span class="terminal-highlight">links</span>, or <span class="terminal-highlight">clear</span>.</p>
+                </div>
+                <label class="terminal-input-row" for="terminalInput">
+                    <span>$</span>
+                    <input id="terminalInput" name="terminalInput" type="text" autocomplete="off" placeholder="type a command">
+                </label>
+            </div>
+        </section>
+    </main>
+
+    <nav class="dock" aria-label="Quick launch dock">
+        <button class="dock-item" data-window="aboutWindow">About</button>
+        <button class="dock-item" data-window="focusWindow">Focus</button>
+        <button class="dock-item" data-window="skillsWindow">Toolkit</button>
+        <button class="dock-item" data-window="terminalWindow">Terminal</button>
+    </nav>
+
+    <script>
+        const windows = [...document.querySelectorAll(".app-window")];
+        const statusMessage = document.getElementById("statusMessage");
+        const liveClock = document.getElementById("liveClock");
+        const bootScreen = document.getElementById("bootScreen");
+        const terminalOutput = document.getElementById("terminalOutput");
+        const terminalInput = document.getElementById("terminalInput");
+        let topZIndex = 20;
+
+        const commandMap = {
+            help: [
+                "Available commands:",
+                "about  - learn who Yukta is",
+                "skills - view strengths and learning areas",
+                "links  - open places to connect",
+                "clear  - clear terminal output"
+            ],
+            about: [
+                "Yukta Choudhary",
+                "First-year B.Tech Computer Science student at SRM University.",
+                "Interested in machine learning and frontend development."
+            ],
+            skills: [
+                "Core: HTML, CSS, JavaScript, frontend UI.",
+                "Growing: machine learning, data-driven problem solving."
+            ],
+            links: [
+                "LinkedIn: https://www.linkedin.com/in/yuktachy",
+                "Legacy explore page: ../explore/sub_index.html"
+            ]
+        };
+
+        function updateClock() {
+            const now = new Date();
+            liveClock.textContent = now.toLocaleTimeString([], {
+                hour: "2-digit",
+                minute: "2-digit"
+            });
+        }
+
+        function bringToFront(windowEl) {
+            topZIndex += 1;
+            windowEl.style.zIndex = topZIndex;
+        }
+
+        function openWindow(windowId) {
+            const windowEl = document.getElementById(windowId);
+
+            if (!windowEl) {
+                return;
+            }
+
+            windowEl.classList.add("active");
+            windowEl.setAttribute("aria-hidden", "false");
+            bringToFront(windowEl);
+            statusMessage.textContent = windowEl.querySelector(".window-bar p").textContent + " open";
+        }
+
+        function closeWindow(windowId) {
+            const windowEl = document.getElementById(windowId);
+
+            if (!windowEl) {
+                return;
+            }
+
+            windowEl.classList.remove("active");
+            windowEl.setAttribute("aria-hidden", "true");
+            statusMessage.textContent = "Ready to explore";
+        }
+
+        function printToTerminal(lines) {
+            lines.forEach((line) => {
+                const paragraph = document.createElement("p");
+                paragraph.textContent = line;
+                terminalOutput.appendChild(paragraph);
+            });
+
+            terminalOutput.scrollTop = terminalOutput.scrollHeight;
+        }
+
+        document.querySelectorAll("[data-window]").forEach((trigger) => {
+            trigger.addEventListener("click", () => openWindow(trigger.dataset.window));
+        });
+
+        document.querySelectorAll("[data-close]").forEach((trigger) => {
+            trigger.addEventListener("click", () => closeWindow(trigger.dataset.close));
+        });
+
+        windows.forEach((windowEl) => {
+            windowEl.addEventListener("mousedown", () => bringToFront(windowEl));
+        });
+
+        terminalInput.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter") {
+                return;
+            }
+
+            const rawCommand = terminalInput.value.trim();
+            const command = rawCommand.toLowerCase();
+
+            if (!rawCommand) {
+                return;
+            }
+
+            printToTerminal(["$ " + rawCommand]);
+
+            if (command === "clear") {
+                terminalOutput.innerHTML = "";
+            } else if (commandMap[command]) {
+                printToTerminal(commandMap[command]);
+            } else {
+                printToTerminal(["Command not found. Try: help"]);
+            }
+
+            terminalInput.value = "";
+        });
+
+        document.querySelectorAll(".window-drag").forEach((dragHandle) => {
+            const windowEl = dragHandle.parentElement;
+            let isDragging = false;
+            let offsetX = 0;
+            let offsetY = 0;
+
+            dragHandle.addEventListener("mousedown", (event) => {
+                if (event.target.matches("button")) {
+                    return;
+                }
+
+                isDragging = true;
+                bringToFront(windowEl);
+                const rect = windowEl.getBoundingClientRect();
+                offsetX = event.clientX - rect.left;
+                offsetY = event.clientY - rect.top;
+                windowEl.classList.add("dragging");
+            });
+
+            document.addEventListener("mousemove", (event) => {
+                if (!isDragging) {
+                    return;
+                }
+
+                const nextLeft = Math.min(Math.max(16, event.clientX - offsetX), window.innerWidth - windowEl.offsetWidth - 16);
+                const nextTop = Math.min(Math.max(72, event.clientY - offsetY), window.innerHeight - windowEl.offsetHeight - 24);
+
+                windowEl.style.left = nextLeft + "px";
+                windowEl.style.top = nextTop + "px";
+            });
+
+            document.addEventListener("mouseup", () => {
+                if (!isDragging) {
+                    return;
+                }
+
+                isDragging = false;
+                windowEl.classList.remove("dragging");
+            });
+        });
+
+        updateClock();
+        setInterval(updateClock, 1000);
+
+        window.addEventListener("load", () => {
+            window.setTimeout(() => {
+                bootScreen.classList.add("hidden");
+            }, 1400);
+        });
+    </script>
+</body>
+</html>
